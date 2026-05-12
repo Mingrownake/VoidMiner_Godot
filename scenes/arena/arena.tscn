@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://efbfj32l6rvh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n62jo"]
+albedo_color = Color(0.10747979, 0.107479714, 0.10747973, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_n62jo"]
+material = SubResource("StandardMaterial3D_n62jo")
+size = Vector2(25, 25)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_1qjuf"]
+
+[node name="Arena" type="StaticBody3D" unique_id=610914567]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=68329781]
+mesh = SubResource("PlaneMesh_n62jo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=324443514]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)
+shape = SubResource("WorldBoundaryShape3D_1qjuf")
